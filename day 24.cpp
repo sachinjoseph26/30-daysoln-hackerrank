@@ -21,16 +21,16 @@ class Solution{
           {
             //Write your code here
             Node *ptr1,*ptr2,*dup;
-            ptr1=head;
-            while (ptr1!=NULL && ptr1->next !=NULL) {
+            ptr1=head;					// assign head value to another ptr ptr1
+            while (ptr1!=NULL && ptr1->next !=NULL) {			/
                 ptr2=ptr1;
                 while(ptr2->next!=NULL)
                 {
-                    if(ptr1->data == ptr2->next->data)
+                    if(ptr1->data == ptr2->next->data)		//compare 
                     {
                         dup=ptr2->next;
                         ptr1->next=ptr1->next->next;
-                        delete(dup);
+                        delete(dup);			//delete the duplicate
                     }
                     else {
                         ptr2=ptr2->next;
